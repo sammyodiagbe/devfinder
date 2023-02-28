@@ -1,7 +1,11 @@
 function App() {
   return (
     <div className="github-app">
-      <header className="App-header"></header>
+      <nav className="nav"></nav>
+      <main className="main-container">
+        <div className="search-container"></div>
+        <section className="search-content"></section>
+      </main>
     </div>
   );
 }
