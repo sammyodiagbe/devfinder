@@ -3,3 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+ --call-to-aciton: #0079FF;
+ --call-to-aciton-hover: #60ABFF;
+
+ /* dark background */
+ --dark-foreground: #FFFFFF;
+ --dark-body-background: #141d2f;
+ --container-background: #1e2a47;
+
+ /* light background */
+
+ --light-body-background-color: #fefefe;
+ --light-container-background: #f6f8ff;
+ --light-foreground-color: #2b3442;
+
+ --light-toggle-hover: #222731;
+ --dark-toggle-hover: #90A4DA;
+
+ --padding: 1em;
+}
+
+body {
+    font-size: 16px;
+}
