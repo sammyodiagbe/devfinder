@@ -1,7 +1,14 @@
 import { useState } from "react";
 import IconSearch from "./components/iconsearch";
 import IconMoon from "./components/iconmoon";
+import IconLocation from "./components/iconlocation";
+import IconWebsite from "./components/iconwebsite";
+import IcontTwitter from "./components/icontwitter";
+import IconSun from "./components/iconsun";
+import IconCompany from "./components/iconcompany";
+
 import { githubApiUrl } from "./helper";
+import IconTwitter from "./components/icontwitter";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -17,6 +24,9 @@ function App() {
     following,
     twitter_username,
     location,
+    login,
+    name,
+    company,
   } = user ?? {};
 
   const searchUser = async () => {
@@ -60,7 +70,49 @@ function App() {
         <section className="search-content">
           {/* <aside className="user-container"></aside> */}
           <img src={avatar_url} alt="Github user profile" />
-          <aside className="user-details"></aside>
+          <header className="head">
+            <div className="head-left">
+              <h3>{name}</h3>
+              <p>@{login}</p>
+            </div>
+
+            <p>Joined at Mar 14</p>
+          </header>
+          <section className="user-details">
+            <p>{bio}</p>
+            <div className="repo-details">
+              <div className="r-details">
+                <p>Repos</p>
+                <b>{public_repos}</b>
+              </div>
+              <div className="r-details">
+                <p>followers</p>
+                <b>{followers}</b>
+              </div>
+              <div className="r-details">
+                <p>Following</p>
+                <b>{following}</b>
+              </div>
+            </div>
+            <div className="socials">
+              <span className="social">
+                <IconLocation />
+                {location ? location : "Not available"}
+              </span>
+              <span className="social">
+                <IconWebsite />
+                {blog ? <a href={blog}>{blog}</a> : "Not available"}
+              </span>
+              <span className="social">
+                <IconTwitter />
+                {twitter_username ? "Twitter" : "Not available"}
+              </span>
+              <span className="social">
+                <IconCompany />
+                {company ? company : "Not available"}
+              </span>
+            </div>
+          </section>
         </section>
       </main>
     </div>
