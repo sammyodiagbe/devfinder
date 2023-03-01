@@ -1,19 +1,51 @@
 /* dark background */
 /* light background */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
 * {
   padding: 0;
   margin: 0;
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  font-size: 16px;
+  font-family: "Space Mono", monospace;
 }
 
 svg {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  background: #fefefe;
+}
+
+body div.github-app {
+  min-height: 100vh;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body div.github-app.dark {
+  background: #141d2f;
+  color: #ffffff;
+}
+
+body div.github-app nav.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=index.css.map */

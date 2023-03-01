@@ -14,6 +14,7 @@ function App() {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   const {
     avatar_url,
@@ -45,14 +46,14 @@ function App() {
     } catch (err) {}
   };
   return (
-    <div className="github-app">
+    <div className={`github-app ${darkMode ? "dark" : ""}`}>
       <nav className="nav">
         <h2>Devfinder</h2>
 
-        <div className="toggle-theme">
-          <span>Dark</span>
-          <IconMoon />
-        </div>
+        <button className="toggle-theme" onClick={() => setDarkMode(!darkMode)}>
+          <span>{darkMode ? "Light" : "Dark"}</span>
+          {darkMode ? <IconSun /> : <IconMoon />}
+        </button>
       </nav>
       <main className="main-container">
         <div className="search-container">
