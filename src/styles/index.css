@@ -39,33 +39,33 @@ body div.github-app.dark {
   color: #ffffff;
 }
 
-body div.github-app.dark nav.nav button.toggle-theme {
+body div.github-app.dark div.container nav.nav button.toggle-theme {
   color: #ffffff;
 }
 
-body div.github-app.dark main.main-container div.search-container,
-body div.github-app.dark main.main-container section.search-content {
+body div.github-app.dark div.container main.main-container div.search-container,
+body div.github-app.dark div.container main.main-container section.search-content {
   background: #1e2a47;
 }
 
-body div.github-app.dark main.main-container div.search-container input[type="text"] {
+body div.github-app.dark div.container main.main-container div.search-container input[type="text"] {
   color: #ffffff;
 }
 
-body div.github-app.dark main.main-container section.search-content section.user-details div.repo-details {
+body div.github-app.dark div.container main.main-container section.search-content section.user-details div.repo-details {
   background: #141d2f;
 }
 
-body div.github-app.dark main.main-container section.search-content div.socials span.social svg path,
-body div.github-app.dark main.main-container section.search-content div.socials span.social svg g {
+body div.github-app.dark div.container main.main-container section.search-content div.socials span.social svg path,
+body div.github-app.dark div.container main.main-container section.search-content div.socials span.social svg g {
   fill: #ffffff;
 }
 
-body div.github-app.dark main.main-container section.search-content div.socials span.social a {
+body div.github-app.dark div.container main.main-container section.search-content div.socials span.social a {
   color: #ffffff;
 }
 
-body div.github-app nav.nav {
+body div.github-app div.container nav.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +78,7 @@ body div.github-app nav.nav {
           justify-content: space-between;
 }
 
-body div.github-app nav.nav button.toggle-theme {
+body div.github-app div.container nav.nav button.toggle-theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,15 +89,15 @@ body div.github-app nav.nav button.toggle-theme {
   background: transparent;
 }
 
-body div.github-app nav.nav button.toggle-theme span {
+body div.github-app div.container nav.nav button.toggle-theme span {
   margin-right: 0.5em;
 }
 
-body div.github-app main.main-container {
+body div.github-app div.container main.main-container {
   margin-top: 1.5em;
 }
 
-body div.github-app main.main-container div.search-container {
+body div.github-app div.container main.main-container div.search-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,7 +109,7 @@ body div.github-app main.main-container div.search-container {
   margin: 1.7em 0;
 }
 
-body div.github-app main.main-container div.search-container input[type="text"] {
+body div.github-app div.container main.main-container div.search-container input[type="text"] {
   padding: 1.2em 1.3em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -118,25 +118,25 @@ body div.github-app main.main-container div.search-container input[type="text"] 
   background: transparent;
 }
 
-body div.github-app main.main-container div.search-container button.btn {
+body div.github-app div.container main.main-container div.search-container button.btn {
   padding: 1.3em 1.7em;
   background: #0079ff;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
-body div.github-app main.main-container div.search-container button.btn:hover {
+body div.github-app div.container main.main-container div.search-container button.btn:hover {
   background: #60abff;
 }
 
-body div.github-app main.main-container div.search-container,
-body div.github-app main.main-container section.search-content {
-  border-radius: 10px;
+body div.github-app div.container main.main-container div.search-container,
+body div.github-app div.container main.main-container section.search-content {
+  border-radius: 15px;
   -webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
 }
 
-body div.github-app main.main-container section.search-content {
+body div.github-app div.container main.main-container section.search-content {
   background: #ffffff;
   padding: 1.2em;
   display: -ms-grid;
@@ -145,7 +145,11 @@ body div.github-app main.main-container section.search-content {
   gap: 15px;
 }
 
-body div.github-app main.main-container section.search-content img {
+body div.github-app div.container main.main-container section.search-content div.img-container {
+  text-align: center;
+}
+
+body div.github-app div.container main.main-container section.search-content div.img-container img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: img;
@@ -154,30 +158,29 @@ body div.github-app main.main-container section.search-content img {
   border-radius: 110px;
 }
 
-body div.github-app main.main-container section.search-content header.head {
+body div.github-app div.container main.main-container section.search-content header.head {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: usr-details;
 }
 
-body div.github-app main.main-container section.search-content header.head div.head-left p {
+body div.github-app div.container main.main-container section.search-content header.head div.head-left p {
   color: #0079ff;
   font-weight: bold;
 }
 
-body div.github-app main.main-container section.search-content section.user-details {
+body div.github-app div.container main.main-container section.search-content section.user-details {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: details;
-  padding: 1.4em 0;
 }
 
-body div.github-app main.main-container section.search-content section.user-details p.bio {
-  margin: 1.4em 0;
+body div.github-app div.container main.main-container section.search-content section.user-details p.bio {
+  margin-bottom: 1.4em;
 }
 
-body div.github-app main.main-container section.search-content section.user-details div.repo-details {
+body div.github-app div.container main.main-container section.search-content section.user-details div.repo-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,22 +189,22 @@ body div.github-app main.main-container section.search-content section.user-deta
           justify-content: space-evenly;
   padding: 1.3em 0;
   background: #f6f8ff;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 1.3em;
 }
 
-body div.github-app main.main-container section.search-content section.user-details div.repo-details div.r-details {
+body div.github-app div.container main.main-container section.search-content section.user-details div.repo-details div.r-details {
   text-align: center;
 }
 
-body div.github-app main.main-container section.search-content section.user-details div.socials {
+body div.github-app div.container main.main-container section.search-content section.user-details div.socials {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
 
-body div.github-app main.main-container section.search-content section.user-details div.socials span.social {
+body div.github-app div.container main.main-container section.search-content section.user-details div.socials span.social {
   margin-bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,7 +214,71 @@ body div.github-app main.main-container section.search-content section.user-deta
           align-items: center;
 }
 
-body div.github-app main.main-container section.search-content section.user-details div.socials span.social svg {
+body div.github-app div.container main.main-container section.search-content section.user-details div.socials span.social svg {
   margin-right: 15px;
+}
+
+@media screen and (min-width: 760px) {
+  body div.github-app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body div.github-app div.container {
+    width: 573px;
+  }
+  body div.github-app div.container main.main-container section.search-content {
+        grid-template-areas: "img usr-details usr-details" "img details details";
+  }
+  body div.github-app div.container main.main-container section.search-content header.head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body div.github-app div.container main.main-container section.search-content div.img-container img {
+    height: 117px;
+    width: 117px;
+  }
+  body div.github-app div.container main.main-container section.search-content section.user-details div.socials {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body div.github-app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body div.github-app div.container {
+    width: 730px;
+  }
+  body div.github-app div.container main.main-container section.search-content {
+        grid-template-areas: "img usr-details usr-details" ". details details";
+    background: red;
+  }
+  body div.github-app div.container main.main-container section.search-content img {
+    height: 117px;
+    width: 117px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

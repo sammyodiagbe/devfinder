@@ -1,0 +1,63 @@
+@media screen and (min-width: 760px) {
+  body {
+    div.github-app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div.container {
+        width: 573px;
+        main.main-container {
+          section.search-content {
+            header.head {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+            }
+            div.img-container {
+              img {
+                height: 117px;
+                width: 117px;
+              }
+            }
+            grid-template-areas:
+              "img usr-details usr-details"
+              "img details details";
+
+            section.user-details {
+              div.socials {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: 1100px) {
+  body {
+    div.github-app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div.container {
+        width: 730px;
+
+        main.main-container {
+          section.search-content {
+            img {
+              height: 117px;
+              width: 117px;
+            }
+            grid-template-areas:
+              "img usr-details usr-details"
+              ". details details";
+            background: red;
+          }
+        }
+      }
+    }
+  }
+}

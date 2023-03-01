@@ -5,7 +5,7 @@ $call-to-aciton-hover: #60abff;
 $dark-foreground: #ffffff;
 $dark-body-background: #141d2f;
 $container-background: #1e2a47;
-$border-radius: 10px;
+$border-radius: 15px;
 
 /* light background */
 
@@ -51,145 +51,153 @@ body {
     &.dark {
       background: $dark-body-background;
       color: $white;
-      nav.nav {
-        button.toggle-theme {
-          color: $white;
-        }
-      }
-      main.main-container {
-        div.search-container,
-        section.search-content {
-          background: $container-background;
-        }
-        div.search-container {
-          input[type="text"] {
+
+      div.container {
+        nav.nav {
+          button.toggle-theme {
             color: $white;
           }
         }
-
-        section.search-content {
-          section.user-details {
-            div.repo-details {
-              background: $dark-body-background;
+        main.main-container {
+          div.search-container,
+          section.search-content {
+            background: $container-background;
+          }
+          div.search-container {
+            input[type="text"] {
+              color: $white;
             }
           }
 
-          div.socials {
-            span.social {
-              svg {
-                path,
-                g {
-                  fill: $white;
+          section.search-content {
+            section.user-details {
+              div.repo-details {
+                background: $dark-body-background;
+              }
+            }
+
+            div.socials {
+              span.social {
+                svg {
+                  path,
+                  g {
+                    fill: $white;
+                  }
+                }
+
+                a {
+                  color: $white;
                 }
               }
+            }
+          }
+        }
+      }
+    }
 
-              a {
-                color: $white;
+    div.container {
+      nav.nav {
+        display: flex;
+        padding: 1.2em 0;
+        align-items: center;
+        justify-content: space-between;
+
+        button.toggle-theme {
+          display: flex;
+          align-items: center;
+          padding: 0 $padding;
+          background: transparent;
+          span {
+            margin-right: 0.5em;
+          }
+        }
+      }
+
+      main.main-container {
+        margin-top: 1.5em;
+        div.search-container {
+          display: flex;
+          padding: 0.5em 0.5em;
+          align-items: center;
+          background: $white;
+          margin: 1.7em 0;
+          input[type="text"] {
+            padding: 1.2em $padding;
+            flex: 1;
+            font-size: 0.9em;
+            background: transparent;
+          }
+
+          button.btn {
+            padding: $padding 1.7em;
+            background: $call-to-aciton;
+            color: $white;
+            border-radius: $border-radius;
+            &:hover {
+              background: $call-to-aciton-hover;
+            }
+          }
+        }
+
+        div.search-container,
+        section.search-content {
+          border-radius: $border-radius;
+          box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        section.search-content {
+          background: $white;
+          padding: 1.2em;
+          display: grid;
+          grid-template-areas: "img usr-details" "details details";
+          gap: 15px;
+          div.img-container {
+            text-align: center;
+            img {
+              grid-area: img;
+              height: 70px;
+              width: 70px;
+              border-radius: 110px;
+            }
+          }
+
+          header.head {
+            grid-area: usr-details;
+
+            div.head-left {
+              p {
+                color: $call-to-aciton;
+                font-weight: bold;
               }
             }
           }
-        }
-      }
-    }
-    nav.nav {
-      display: flex;
-      padding: 1.2em 0;
-      align-items: center;
-      justify-content: space-between;
-
-      button.toggle-theme {
-        display: flex;
-        align-items: center;
-        padding: 0 $padding;
-        background: transparent;
-        span {
-          margin-right: 0.5em;
-        }
-      }
-    }
-
-    main.main-container {
-      margin-top: 1.5em;
-      div.search-container {
-        display: flex;
-        padding: 0.5em 0.5em;
-        align-items: center;
-        background: $white;
-        margin: 1.7em 0;
-        input[type="text"] {
-          padding: 1.2em $padding;
-          flex: 1;
-          font-size: 0.9em;
-          background: transparent;
-        }
-
-        button.btn {
-          padding: $padding 1.7em;
-          background: $call-to-aciton;
-          color: $white;
-          border-radius: $border-radius;
-          &:hover {
-            background: $call-to-aciton-hover;
-          }
-        }
-      }
-
-      div.search-container,
-      section.search-content {
-        border-radius: $border-radius;
-        box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
-      }
-
-      section.search-content {
-        background: $white;
-        padding: 1.2em;
-        display: grid;
-        grid-template-areas: "img usr-details" "details details";
-        gap: 15px;
-        img {
-          grid-area: img;
-          height: 70px;
-          width: 70px;
-          border-radius: 110px;
-        }
-
-        header.head {
-          grid-area: usr-details;
-
-          div.head-left {
-            p {
-              color: $call-to-aciton;
-              font-weight: bold;
+          section.user-details {
+            grid-area: details;
+            p.bio {
+              margin-bottom: 1.4em;
             }
-          }
-        }
-        section.user-details {
-          grid-area: details;
-          padding: 1.4em 0;
-          p.bio {
-            margin: 1.4em 0;
-          }
-          div.repo-details {
-            display: flex;
-            justify-content: space-evenly;
-            padding: $padding 0;
-            background: $light-body-background-color;
-            border-radius: $border-radius;
-            margin-bottom: 1.3em;
-            div.r-details {
-              text-align: center;
-            }
-          }
-
-          div.socials {
-            display: grid;
-            grid-template-columns: 1fr;
-            span.social {
-              margin-bottom: 1em;
+            div.repo-details {
               display: flex;
-              align-items: center;
-              svg {
-                margin-right: 15px;
+              justify-content: space-evenly;
+              padding: $padding 0;
+              background: $light-body-background-color;
+              border-radius: $border-radius;
+              margin-bottom: 1.3em;
+              div.r-details {
+                text-align: center;
+              }
+            }
+
+            div.socials {
+              display: grid;
+              grid-template-columns: 1fr;
+              span.social {
+                margin-bottom: 1em;
+                display: flex;
+                align-items: center;
+                svg {
+                  margin-right: 15px;
+                }
               }
             }
           }
@@ -198,3 +206,5 @@ body {
     }
   }
 }
+
+@import "./media_query";
