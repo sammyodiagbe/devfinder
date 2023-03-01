@@ -41,16 +41,20 @@
 
         main.main-container {
           section.search-content {
-            section.user-details {
+            padding: 2em;
+            div.img-head-container {
               header.head {
+                flex: 1;
                 display: flex;
                 align-items: flex-start;
                 justify-content: space-between;
               }
-            }
-            div.img-head-container {
+              section.user-details {
+              }
               div.img-container {
                 margin-right: 25px;
+                text-align: center;
+                width: 150px;
                 img {
                   height: 117px;
                   width: 117px;

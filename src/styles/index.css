@@ -282,10 +282,14 @@ body div.github-app div.container main.main-container section.search-content sec
     width: 730px;
   }
   body div.github-app div.container main.main-container section.search-content {
+    padding: 2em;
     gap: 0;
         grid-template-areas: "img img" ". details";
   }
-  body div.github-app div.container main.main-container section.search-content section.user-details header.head {
+  body div.github-app div.container main.main-container section.search-content div.img-head-container header.head {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -298,6 +302,8 @@ body div.github-app div.container main.main-container section.search-content sec
   }
   body div.github-app div.container main.main-container section.search-content div.img-head-container div.img-container {
     margin-right: 25px;
+    text-align: center;
+    width: 150px;
   }
   body div.github-app div.container main.main-container section.search-content div.img-head-container div.img-container img {
     height: 117px;

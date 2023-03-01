@@ -80,7 +80,7 @@ function App() {
                 style={{
                   color: "tomato",
                   marginRight: "6px",
-                  fontSize: ".8em",
+                  fontSize: ".7em",
                 }}
               >
                 {error}
