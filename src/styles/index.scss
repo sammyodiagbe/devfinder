@@ -9,7 +9,7 @@ $border-radius: 10px;
 
 /* light background */
 
-$light-body-background-color: #fefefe;
+$light-body-background-color: #f6f8ff;
 $light-container-background: #f6f8ff;
 $light-foreground-color: #2b3442;
 
@@ -17,7 +17,7 @@ $light-toggle-hover: #222731;
 $dark-toggle-hover: #90a4da;
 $white: #ffffff;
 
-$padding: 1em;
+$padding: 1.3em;
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
 
@@ -46,13 +46,14 @@ body {
   div.github-app {
     min-height: 100vh;
     transition: all 0.5s;
+    padding: $padding;
     &.dark {
       background: $dark-body-background;
       color: $dark-foreground;
     }
     nav.nav {
       display: flex;
-      padding: $padding;
+      padding: $padding 0;
       align-items: center;
       justify-content: space-between;
 
@@ -68,9 +69,10 @@ body {
     }
 
     main.main-container {
-      padding: $padding;
+      margin-top: 1.5em;
       div.search-container {
         display: flex;
+        padding: 0 $padding;
         align-items: center;
         background: $white;
         margin: 1.2em 0;
@@ -88,6 +90,39 @@ body {
           &:hover {
             background: $call-to-aciton-hover;
           }
+        }
+      }
+
+      div.search-container,
+      search.search-content {
+        border-radius: $border-radius;
+      }
+
+      section.search-content {
+        background: $white;
+        padding: 1.2em;
+        display: grid;
+        grid-template-areas: "img usr-details" "details details";
+        img {
+          grid-area: img;
+          height: 110px;
+          width: 110px;
+          border-radius: 110px;
+        }
+
+        header.head {
+          grid-area: usr-details;
+
+          div.head-left {
+            p {
+              color: $call-to-aciton;
+              font-weight: bold;
+            }
+          }
+        }
+        section.user-details {
+          grid-area: details;
+          padding: 1.4em 0;
         }
       }
     }

@@ -23,13 +23,14 @@ img {
 body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
-  background: #fefefe;
+  background: #f6f8ff;
 }
 
 body div.github-app {
   min-height: 100vh;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  padding: 1.3em;
 }
 
 body div.github-app.dark {
@@ -41,7 +42,7 @@ body div.github-app nav.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1em;
+  padding: 1.3em 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -57,7 +58,7 @@ body div.github-app nav.nav button.toggle-theme {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1em;
+  padding: 0 1.3em;
   background: transparent;
 }
 
@@ -66,13 +67,14 @@ body div.github-app nav.nav button.toggle-theme span {
 }
 
 body div.github-app main.main-container {
-  padding: 1em;
+  margin-top: 1.5em;
 }
 
 body div.github-app main.main-container div.search-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 1.3em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -81,7 +83,7 @@ body div.github-app main.main-container div.search-container {
 }
 
 body div.github-app main.main-container div.search-container input[type="text"] {
-  padding: 1.5em 1em;
+  padding: 1.5em 1.3em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -89,7 +91,7 @@ body div.github-app main.main-container div.search-container input[type="text"] 
 }
 
 body div.github-app main.main-container div.search-container button.btn {
-  padding: 1em 1.7em;
+  padding: 1.3em 1.7em;
   background: #0079ff;
   color: #ffffff;
   border-radius: 10px;
@@ -97,5 +99,46 @@ body div.github-app main.main-container div.search-container button.btn {
 
 body div.github-app main.main-container div.search-container button.btn:hover {
   background: #60abff;
+}
+
+body div.github-app main.main-container div.search-container,
+body div.github-app main.main-container search.search-content {
+  border-radius: 10px;
+}
+
+body div.github-app main.main-container section.search-content {
+  background: #ffffff;
+  padding: 1.2em;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "img usr-details" "details details";
+}
+
+body div.github-app main.main-container section.search-content img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img;
+  height: 110px;
+  width: 110px;
+  border-radius: 110px;
+}
+
+body div.github-app main.main-container section.search-content header.head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: usr-details;
+}
+
+body div.github-app main.main-container section.search-content header.head div.head-left p {
+  color: #0079ff;
+  font-weight: bold;
+}
+
+body div.github-app main.main-container section.search-content section.user-details {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: details;
+  padding: 1.4em 0;
 }
 /*# sourceMappingURL=index.css.map */
