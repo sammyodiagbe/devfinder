@@ -77,15 +77,15 @@ function App() {
             <div className="img-container">
               <img src={avatar_url} alt="Github user profile" />
             </div>
-            <header className="head">
-              <div className="head-left">
-                <h3>{name}</h3>
-                <p>@{login}</p>
-              </div>
-
-              <p>Joined at Mar 14</p>
-            </header>
             <section className="user-details">
+              <header className="head">
+                <div className="head-left">
+                  <h3>{name}</h3>
+                  <p>@{login}</p>
+                </div>
+
+                <p>Joined at Mar 14</p>
+              </header>
               <p className="bio">{bio}</p>
               <div className="repo-details">
                 <div className="r-details">

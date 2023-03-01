@@ -8,11 +8,6 @@
         width: 573px;
         main.main-container {
           section.search-content {
-            header.head {
-              display: flex;
-              align-items: flex-start;
-              justify-content: space-between;
-            }
             div.img-container {
               img {
                 height: 117px;
@@ -47,6 +42,13 @@
 
         main.main-container {
           section.search-content {
+            section.user-details {
+              header.head {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+              }
+            }
             img {
               height: 117px;
               width: 117px;
@@ -54,7 +56,6 @@
             grid-template-areas:
               "img usr-details usr-details"
               ". details details";
-            background: red;
           }
         }
       }

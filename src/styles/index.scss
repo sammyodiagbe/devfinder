@@ -37,7 +37,9 @@ svg {
 img {
   max-width: 100%;
 }
-
+button {
+  cursor: pointer;
+}
 body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
@@ -56,6 +58,15 @@ body {
         nav.nav {
           button.toggle-theme {
             color: $white;
+            &:hover {
+              color: #90a4da;
+              svg {
+                path,
+                g {
+                  fill: #90a4da;
+                }
+              }
+            }
           }
         }
         main.main-container {
@@ -105,7 +116,7 @@ body {
         button.toggle-theme {
           display: flex;
           align-items: center;
-          padding: 0 $padding;
+          padding: 0 1.5em;
           background: transparent;
           span {
             margin-right: 0.5em;
@@ -161,18 +172,18 @@ body {
             }
           }
 
-          header.head {
+          section.user-details {
             grid-area: usr-details;
-
-            div.head-left {
-              p {
-                color: $call-to-aciton;
-                font-weight: bold;
+            header.head {
+              grid-area: usr-details;
+              margin-bottom: 1.5em;
+              div.head-left {
+                p {
+                  color: $call-to-aciton;
+                  font-weight: bold;
+                }
               }
             }
-          }
-          section.user-details {
-            grid-area: details;
             p.bio {
               margin-bottom: 1.4em;
             }
