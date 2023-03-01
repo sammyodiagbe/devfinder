@@ -74,18 +74,20 @@ function App() {
           </div>
           <section className="search-content">
             {/* <aside className="user-container"></aside> */}
-            <div className="img-container">
-              <img src={avatar_url} alt="Github user profile" />
-            </div>
-            <section className="user-details">
+            <div className="img-head-container">
+              <div className="img-container">
+                <img src={avatar_url} alt="Github user profile" />
+              </div>
               <header className="head">
                 <div className="head-left">
                   <h3>{name}</h3>
-                  <p>@{login}</p>
+                  <p className="username">@{login}</p>
                 </div>
 
                 <p>Joined at Mar 14</p>
               </header>
+            </div>
+            <section className="user-details">
               <p className="bio">{bio}</p>
               <div className="repo-details">
                 <div className="r-details">

@@ -8,15 +8,14 @@
         width: 573px;
         main.main-container {
           section.search-content {
-            div.img-container {
-              img {
-                height: 117px;
-                width: 117px;
+            div.img-head-container {
+              div.img-container {
+                img {
+                  height: 117px;
+                  width: 117px;
+                }
               }
             }
-            grid-template-areas:
-              "img usr-details usr-details"
-              "img details details";
 
             section.user-details {
               div.socials {
@@ -49,13 +48,19 @@
                 justify-content: space-between;
               }
             }
-            img {
-              height: 117px;
-              width: 117px;
+            div.img-head-container {
+              div.img-container {
+                margin-right: 25px;
+                img {
+                  height: 117px;
+                  width: 117px;
+                }
+              }
             }
+            gap: 0;
             grid-template-areas:
-              "img usr-details usr-details"
-              ". details details";
+              "img img"
+              ". details";
           }
         }
       }
