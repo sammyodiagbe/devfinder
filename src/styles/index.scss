@@ -61,6 +61,11 @@ body {
         section.search-content {
           background: $container-background;
         }
+        div.search-container {
+          input[type="text"] {
+            color: $white;
+          }
+        }
 
         section.search-content {
           section.user-details {
@@ -107,7 +112,7 @@ body {
       margin-top: 1.5em;
       div.search-container {
         display: flex;
-        padding: 0.5em $padding;
+        padding: 0.5em 0.5em;
         align-items: center;
         background: $white;
         margin: 1.7em 0;
