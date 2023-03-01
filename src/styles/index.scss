@@ -51,7 +51,11 @@ body {
     &.dark {
       background: $dark-body-background;
       color: $white;
-
+      nav.nav {
+        button.toggle-theme {
+          color: $white;
+        }
+      }
       main.main-container {
         div.search-container,
         section.search-content {

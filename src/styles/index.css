@@ -39,6 +39,10 @@ body div.github-app.dark {
   color: #ffffff;
 }
 
+body div.github-app.dark nav.nav button.toggle-theme {
+  color: #ffffff;
+}
+
 body div.github-app.dark main.main-container div.search-container,
 body div.github-app.dark main.main-container section.search-content {
   background: #1e2a47;
