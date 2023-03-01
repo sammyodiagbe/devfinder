@@ -1,6 +1,6 @@
 /* dark background */
 /* light background */
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -23,10 +23,11 @@ img {
 body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
-  background: #f6f8ff;
 }
 
 body div.github-app {
+  background: #f6f8ff;
+  color: #2b3442;
   min-height: 100vh;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -38,11 +39,29 @@ body div.github-app.dark {
   color: #ffffff;
 }
 
+body div.github-app.dark main.main-container div.search-container,
+body div.github-app.dark main.main-container section.search-content {
+  background: #1e2a47;
+}
+
+body div.github-app.dark main.main-container section.search-content section.user-details div.repo-details {
+  background: #141d2f;
+}
+
+body div.github-app.dark main.main-container section.search-content div.socials span.social svg path,
+body div.github-app.dark main.main-container section.search-content div.socials span.social svg g {
+  fill: #ffffff;
+}
+
+body div.github-app.dark main.main-container section.search-content div.socials span.social a {
+  color: #ffffff;
+}
+
 body div.github-app nav.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1.3em 0;
+  padding: 1.2em 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -74,20 +93,21 @@ body div.github-app main.main-container div.search-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1.3em;
+  padding: 0.5em 1.3em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: #ffffff;
-  margin: 1.2em 0;
+  margin: 1.7em 0;
 }
 
 body div.github-app main.main-container div.search-container input[type="text"] {
-  padding: 1.5em 1.3em;
+  padding: 1.2em 1.3em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   font-size: 0.9em;
+  background: transparent;
 }
 
 body div.github-app main.main-container div.search-container button.btn {
@@ -102,8 +122,10 @@ body div.github-app main.main-container div.search-container button.btn:hover {
 }
 
 body div.github-app main.main-container div.search-container,
-body div.github-app main.main-container search.search-content {
+body div.github-app main.main-container section.search-content {
   border-radius: 10px;
+  -webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 body div.github-app main.main-container section.search-content {
@@ -112,14 +134,15 @@ body div.github-app main.main-container section.search-content {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "img usr-details" "details details";
+  gap: 15px;
 }
 
 body div.github-app main.main-container section.search-content img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: img;
-  height: 110px;
-  width: 110px;
+  height: 70px;
+  width: 70px;
   border-radius: 110px;
 }
 
@@ -140,5 +163,47 @@ body div.github-app main.main-container section.search-content section.user-deta
   -ms-grid-column-span: 2;
   grid-area: details;
   padding: 1.4em 0;
+}
+
+body div.github-app main.main-container section.search-content section.user-details p.bio {
+  margin: 1.4em 0;
+}
+
+body div.github-app main.main-container section.search-content section.user-details div.repo-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1.3em 0;
+  background: #f6f8ff;
+  border-radius: 10px;
+  margin-bottom: 1.3em;
+}
+
+body div.github-app main.main-container section.search-content section.user-details div.repo-details div.r-details {
+  text-align: center;
+}
+
+body div.github-app main.main-container section.search-content section.user-details div.socials {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+body div.github-app main.main-container section.search-content section.user-details div.socials span.social {
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div.github-app main.main-container section.search-content section.user-details div.socials span.social svg {
+  margin-right: 15px;
 }
 /*# sourceMappingURL=index.css.map */

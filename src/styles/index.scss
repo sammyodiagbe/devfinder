@@ -19,7 +19,7 @@ $white: #ffffff;
 
 $padding: 1.3em;
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 * {
   padding: 0;
@@ -41,19 +41,50 @@ img {
 body {
   font-family: "Space Mono", monospace;
   font-size: 16px;
-  background: $light-body-background-color;
   //   padding: $padding;
   div.github-app {
+    background: $light-body-background-color;
+    color: $light-foreground-color;
     min-height: 100vh;
     transition: all 0.5s;
     padding: $padding;
     &.dark {
       background: $dark-body-background;
-      color: $dark-foreground;
+      color: $white;
+
+      main.main-container {
+        div.search-container,
+        section.search-content {
+          background: $container-background;
+        }
+
+        section.search-content {
+          section.user-details {
+            div.repo-details {
+              background: $dark-body-background;
+            }
+          }
+
+          div.socials {
+            span.social {
+              svg {
+                path,
+                g {
+                  fill: $white;
+                }
+              }
+
+              a {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
     }
     nav.nav {
       display: flex;
-      padding: $padding 0;
+      padding: 1.2em 0;
       align-items: center;
       justify-content: space-between;
 
@@ -72,14 +103,15 @@ body {
       margin-top: 1.5em;
       div.search-container {
         display: flex;
-        padding: 0 $padding;
+        padding: 0.5em $padding;
         align-items: center;
         background: $white;
-        margin: 1.2em 0;
+        margin: 1.7em 0;
         input[type="text"] {
-          padding: 1.5em $padding;
+          padding: 1.2em $padding;
           flex: 1;
           font-size: 0.9em;
+          background: transparent;
         }
 
         button.btn {
@@ -94,8 +126,9 @@ body {
       }
 
       div.search-container,
-      search.search-content {
+      section.search-content {
         border-radius: $border-radius;
+        box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2);
       }
 
       section.search-content {
@@ -103,10 +136,11 @@ body {
         padding: 1.2em;
         display: grid;
         grid-template-areas: "img usr-details" "details details";
+        gap: 15px;
         img {
           grid-area: img;
-          height: 110px;
-          width: 110px;
+          height: 70px;
+          width: 70px;
           border-radius: 110px;
         }
 
@@ -123,6 +157,33 @@ body {
         section.user-details {
           grid-area: details;
           padding: 1.4em 0;
+          p.bio {
+            margin: 1.4em 0;
+          }
+          div.repo-details {
+            display: flex;
+            justify-content: space-evenly;
+            padding: $padding 0;
+            background: $light-body-background-color;
+            border-radius: $border-radius;
+            margin-bottom: 1.3em;
+            div.r-details {
+              text-align: center;
+            }
+          }
+
+          div.socials {
+            display: grid;
+            grid-template-columns: 1fr;
+            span.social {
+              margin-bottom: 1em;
+              display: flex;
+              align-items: center;
+              svg {
+                margin-right: 15px;
+              }
+            }
+          }
         }
       }
     }

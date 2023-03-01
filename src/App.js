@@ -80,14 +80,14 @@ function App() {
             <p>Joined at Mar 14</p>
           </header>
           <section className="user-details">
-            <p>{bio}</p>
+            <p className="bio">{bio}</p>
             <div className="repo-details">
               <div className="r-details">
                 <p>Repos</p>
                 <b>{public_repos}</b>
               </div>
               <div className="r-details">
-                <p>followers</p>
+                <p>Followers</p>
                 <b>{followers}</b>
               </div>
               <div className="r-details">
