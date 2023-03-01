@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   border: none;
+  outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Space Mono", monospace;
@@ -47,5 +48,54 @@ body div.github-app nav.nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body div.github-app nav.nav button.toggle-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1em;
+  background: transparent;
+}
+
+body div.github-app nav.nav button.toggle-theme span {
+  margin-right: 0.5em;
+}
+
+body div.github-app main.main-container {
+  padding: 1em;
+}
+
+body div.github-app main.main-container div.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  margin: 1.2em 0;
+}
+
+body div.github-app main.main-container div.search-container input[type="text"] {
+  padding: 1.5em 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.9em;
+}
+
+body div.github-app main.main-container div.search-container button.btn {
+  padding: 1em 1.7em;
+  background: #0079ff;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+body div.github-app main.main-container div.search-container button.btn:hover {
+  background: #60abff;
 }
 /*# sourceMappingURL=index.css.map */

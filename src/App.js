@@ -60,7 +60,7 @@ function App() {
           <IconSearch />
           <input
             type="text"
-            placeholder="@username"
+            placeholder="search github username"
             value={username}
             onChange={(event) => setUsername(event.target.value)}
           />

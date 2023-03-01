@@ -5,6 +5,7 @@ $call-to-aciton-hover: #60abff;
 $dark-foreground: #ffffff;
 $dark-body-background: #141d2f;
 $container-background: #1e2a47;
+$border-radius: 10px;
 
 /* light background */
 
@@ -14,6 +15,7 @@ $light-foreground-color: #2b3442;
 
 $light-toggle-hover: #222731;
 $dark-toggle-hover: #90a4da;
+$white: #ffffff;
 
 $padding: 1em;
 
@@ -23,6 +25,7 @@ $padding: 1em;
   padding: 0;
   margin: 0;
   border: none;
+  outline: none;
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
 }
@@ -52,6 +55,41 @@ body {
       padding: $padding;
       align-items: center;
       justify-content: space-between;
+
+      button.toggle-theme {
+        display: flex;
+        align-items: center;
+        padding: 0 $padding;
+        background: transparent;
+        span {
+          margin-right: 0.5em;
+        }
+      }
+    }
+
+    main.main-container {
+      padding: $padding;
+      div.search-container {
+        display: flex;
+        align-items: center;
+        background: $white;
+        margin: 1.2em 0;
+        input[type="text"] {
+          padding: 1.5em $padding;
+          flex: 1;
+          font-size: 0.9em;
+        }
+
+        button.btn {
+          padding: $padding 1.7em;
+          background: $call-to-aciton;
+          color: $white;
+          border-radius: $border-radius;
+          &:hover {
+            background: $call-to-aciton-hover;
+          }
+        }
+      }
     }
   }
 }
